@@ -1,4 +1,3 @@
-/* Ensures the body takes the full height of the viewport */
 html, body {
   height: 100%;
   margin: 0;
@@ -7,7 +6,7 @@ html, body {
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
-  background-image: url('https://cdn.gencraft.com/prod/user/756f396e-d452-42c0-a210-7b00226c8bfd/fbb4eba3-010a-4a94-82e0-4a1fb9760ef5/image/image1_0.jpg?Expires=1724696057&Signature=Vuc14TrkIOUAm5qKEqzDFyIRzkJF5o-qs5-RMJoDYN~vP6KOtMzTcsXk7zlbRSsGtIeZ~VD80s5HsiEOZm2-xgtDqDxIbjWCxshiv454a3a6IoB~LRLrVDO8zmeehylRuCknILjJTGxyd0Kv2kIcH~QTMBzrbk-csYryYOWGATeBoN8yIG~aJRkw6GzKXP5pgE-OHk3DQ2~arbhR7PfMgJEBy5L8R9KVdTbo3RtF~zxRGYEqtXZ9OxhN-tweER0cpSlXg01YtqbfvUFIZSRI-vX1iw2tAgh3ZH-7BzcknZgGzHgmotUtB0LyEEFsCLQzhvQpzeJyChGPK5zzjGNWAA__&Key-Pair-Id=K3RDDB1TZ8BHT8'); 
+  background-image: url('https://cdn.gencraft.com/prod/user/756f396e-d452-42c0-a210-7b00226c8bfd/fbb4eba3-010a-4a94-82e0-4');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -205,5 +204,64 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .navbar a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .landing-page h1 {
+    font-size: 2rem;
+  }
+
+  .landing-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .gallery-images {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .navbar a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .landing-page {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .landing-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .landing-page h2 {
+    font-size: 1.25rem;
+  }
+
+  .feature-list,
+  .facility-details,
+  .challenge-list,
+  .gallery {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .gallery-images {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .footer-content {
+    font-size: 0.875rem;
   }
 }
